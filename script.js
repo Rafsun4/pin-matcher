@@ -23,9 +23,8 @@ for (let i = 0; i < userInputBtn.length; i++) {
             userInput.value = "";  //This is "All Clear" button
         }
         else if (btnClicked.innerText === '<') {
-            const clear           = userInput.value;
-                  newClear        = userInput.value.slice(0, -1);  //This is "Clear(removes last number )" button
-                  userInput.value = newClear;
+            const newClearAll       = userInput.value.slice(0, -1);  //This is "Clear(removes last number )" button
+                  userInput.value   = newClearAll;
         }
         else {
             userInput.value += btnClicked.innerText;
@@ -34,7 +33,7 @@ for (let i = 0; i < userInputBtn.length; i++) {
 }
 
 //Submit Section To Check IF The 4 Digit Number Matches the User Input
-const tryLeft   = document.getElementById('try-left');
+
 const submitBtn = document.getElementById('submitBtn');
 submitBtn.addEventListener('click', function () {
     if (userInput.value === "") {
@@ -57,6 +56,7 @@ submitBtn.addEventListener('click', function () {
 })
 
 //You Can Only Try 3 Times
+const tryLeft   = document.getElementById('tryLeft');
 function leftTry() {
     tryLeft.innerText -= 1;
     if (tryLeft.innerText === '0') {
