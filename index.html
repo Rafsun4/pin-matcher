@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        <!-------------------------Pin Generate Section--------------------  -->
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
@@ -17,6 +18,7 @@
                     <button id="generatePinBtn" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
+            <!-- --------------------User Pin Input ------------------------ -->
             <div class="col-md-6">
                 <div class="input-section half-width">
                     <input id="userInput" class="form-control text-center"type="text">
@@ -42,6 +44,7 @@
                                 <div class="button">0</div>
                                 <div class="button">C</div>
                             </div>
+                            <!-- -------------Submit Section -->
                             <div>
                                 <button id="submitBtn" type="submit" class="submit-btn">Submit</button>
                                 <p class="action-left"><span id="tryLeft">3</span> try left</p>
@@ -50,12 +53,13 @@
                     </div>
                 </div>
             </div>
+            <!-- -----------------------Notification-------------- -->
             <div id="notifySection" class="notify-section">
                 <p id="noMatch" class="notify">❌ Pin Didn't Match, Please try again</p>
                 <p id="match" class = "notify">✅ Pin Matched... Secret door is opening for you</p>
             </div>
         </div>
-    <!-- script tag -->
+    <!-- --------------script tag ---------------->
     <script src="script.js"></script>
 </body>
 </html>
