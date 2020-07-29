@@ -1,8 +1,14 @@
-// Hide Notification Section
+// Hide Notification Section 
+const pin                         = document.getElementById('pin');     //Pin Matcher Section
 const matchNotify                 = document.getElementById('match');
 const noMatchNotify               = document.getElementById('noMatch');
+const doorNotify                  = document.getElementById('door');
+      pin.style.display           = 'block';                  //Pin Matching Section
       matchNotify.style.display   = 'none';
       noMatchNotify.style.display = 'none';
+      doorNotify.style.display          = 'none';
+      
+      
 
 // This Generates Random Numbers of Four Digits
 const generatedPin   = document.getElementById('generatedPin');
@@ -44,13 +50,18 @@ submitBtn.addEventListener('click', function () {
     }
     else {
         if (generatedPin.value == userInput.value) {
-            matchNotify.style.display   = 'block';              //Pin Matched Notification
+            pin.style.display           = 'none';
             noMatchNotify.style.display = 'none';
+            matchNotify.style.display   = 'block';
+            doorNotify.style.display    = 'block';                 //Pin Matched Notification
+            
         }
         else {
-            noMatchNotify.style.display = 'block';
-            matchNotify.style.display   = 'none';            //Pin didn't Match Notification
             leftTry();
+            noMatchNotify.style.display = 'block';
+            pin.style.style.display     = 'block';
+            matchNotify.style.display   = 'none';            //Pin didn't Match Notification
+            doorNotify.style.display    = 'none';
         }
     }
 })
