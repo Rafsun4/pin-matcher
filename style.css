@@ -107,3 +107,8 @@ input[type='text']:focus {
     color: #FF3C5F;
     margin-top: 10px;
 }
+
+.door  img {
+    height: 300px;
+    width: 500px;
+}

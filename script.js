@@ -6,7 +6,7 @@ const doorNotify                  = document.getElementById('door');
       pin.style.display           = 'block';                  //Pin Matching Section
       matchNotify.style.display   = 'none';
       noMatchNotify.style.display = 'none';
-      doorNotify.style.display          = 'none';
+      doorNotify.style.display    = 'none';
       
       
 
